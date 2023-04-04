@@ -14,7 +14,7 @@ public class ShapeFactory implements IFactory{
             return new Circle();
         }
         else
-            return null;
+            return new Angle();
     }
 }
 
