@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="800.0" prefWidth="720.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fabricmethod.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" />
+    </padding>
+    <Label prefHeight="103.0" prefWidth="502.0" text="Программа отображения фигуры по количеству сторон" textAlignment="CENTER">
+        <VBox.margin>
+            <Insets top="-100.0" />
+        </VBox.margin>
+        <font>
+            <Font name="Arial Bold" size="18.0" />
+        </font>
+    </Label>
+    <Canvas fx:id="canv" height="282.0" onMouseClicked="#onHelloButtonClick" width="620.0">
+      <effect>
+         <Blend />
+      </effect>
+   </Canvas>
+    <HBox prefHeight="32.0" prefWidth="680.0">
+        <children>
+
+            <Label fx:id="welcomeText" prefHeight="34.0" prefWidth="146.0" text="Введите кол-во сторон:" />
+            <TextField fx:id="addPicker" alignment="CENTER" onAction="#onHelloButtonClick" prefHeight="32.0" prefWidth="147.0" promptText="0-2" />
+            <Button onAction="#onHelloButtonClick" onMouseClicked="#onHelloButtonClick" prefHeight="31.0" prefWidth="103.0" text="Выполнить">
+                <HBox.margin>
+                    <Insets left="3.0" />
+                </HBox.margin></Button>
+            <Label prefHeight="32.0" prefWidth="49.0" text="Фигура:" textAlignment="CENTER">
+                <HBox.margin>
+                    <Insets left="60.0" />
+                </HBox.margin>
+            </Label>
+            <Label fx:id="labelFigure" prefHeight="33.0" prefWidth="98.0" text="не отображена" textAlignment="CENTER" />
+        </children>
+    </HBox>
+    <VBox prefHeight="54.0" prefWidth="100.0">
+        <children>
+            <Label text="Действия:" textAlignment="CENTER">
+                <font>
+                    <Font name="Comic Sans MS" size="14.0" />
+                </font>
+                <VBox.margin>
+                    <Insets bottom="5.0" left="300.0" top="5.0" />
+                </VBox.margin>
+            </Label>
+            <Button fx:id="clear" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#clearCanvas" prefHeight="26.0" prefWidth="683.0" text="Очистить поле рисования" textAlignment="CENTER">
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+            </Button>
+        </children>
+    </VBox>
+   <ColorPicker fx:id="colors" prefHeight="26.0" prefWidth="397.0">
+      <value>
+         <Color />
+      </value></ColorPicker>
+   <ColorPicker fx:id="colors2" prefHeight="26.0" prefWidth="396.0">
+      <value>
+         <Color green="1.0" blue="0.016091888770461082" />
+      </value>
+   </ColorPicker>
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <TextField fx:id="addBoldLine" promptText="Введите толщину" />
+         <Button fx:id="butLineBold" mnemonicParsing="false" onMouseClicked="#onHelloButtonClick" text="Применить" />
+      </children>
+   </HBox>
+</VBox>
