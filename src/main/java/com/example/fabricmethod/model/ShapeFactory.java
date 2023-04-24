@@ -10,11 +10,10 @@ public class ShapeFactory implements IFactory{
         else if (numberOfSides == 1) {
             return new Lines();
         }
-        else if (numberOfSides == 0) {
+        else 
             return new Circle();
         }
-        else
-            return new Angle();
+       
     }
 }
 
